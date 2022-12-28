@@ -26,7 +26,7 @@ export default function Home() {
 				<div className="flex flex-wrap md:flex-nowrap flex-row-reverse md:flex-row pt-20 md:pt-32 gap-10">
 					<div className="flex flex-col gap-2 w-fit">
 						<h1 className="text-2xl md:text-4xl font-bold">
-							Hello! I'm Pratham, a developer based in Delhi.
+							Hello! I&apos;m Pratham, a developer based in Delhi.
 						</h1>
 						<p className="text-lg">
 							I started learning web development when i was 14 as a hobby.
