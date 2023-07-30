@@ -1,0 +1,20 @@
+[
+	{
+		"title": "Visuals Clipping",
+		"desc": "Portfolio website of Visuals Clipping.",
+		"link": "https://www.visualsclipping.com/",
+		"tech": ["Next.js", "Tailwind"]
+	},
+	{
+		"title": "Spotify Analysis",
+		"desc": "Analysis of a spotify playlist containing songs from albums of different genres, languages and industries.",
+		"link": "https://github.com/prrrathm/spotipy-analysis",
+		"tech": ["Python", "Jupyter", "Pandas"]
+	},
+	{
+		"title": "SPIE ANDC",
+		"desc": "Official website of SPIE ANDC one of very few student Chapter ofthe esteemed international organisation ",
+		"link": "https://spie-next.vercel.app/",
+		"tech": ["Next.js", "Tailwind", "Strapi"]
+	}
+]

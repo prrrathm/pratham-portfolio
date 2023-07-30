@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer base {
+	body {
+		@apply dark:bg-black bg-white;
+	}
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&family=Old+Standard+TT:wght@700&family=Shippori+Mincho:wght@600&display=swap");

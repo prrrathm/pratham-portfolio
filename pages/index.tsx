@@ -4,6 +4,9 @@ import { Inter } from "@next/font/google";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
+import Socials from "../components/Socials";
+import WorkCard from "../components/WorkCard";
+import workData from "../public/workData.json";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -19,130 +22,53 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="px-10 md:px-56 flex flex-col gap-10 text-gray-800 items-center md:items-start antialiased selection:bg-blue-200">
-				{/* Navbar */}
-				<Navbar />
+			<main className=" dark:bg-black bg-white text-slate-800 dark:text-zinc-50 px-10 md:px-56 flex flex-col gap-10 items-center md:items-start antialiased selection:bg-blue-200 ">
 				{/* About */}
-				<div className="flex flex-wrap md:flex-nowrap flex-row-reverse md:flex-row pt-20 md:pt-32 gap-10">
-					<div className="flex flex-col gap-2 w-fit">
-						<h1 className="text-2xl md:text-4xl font-bold">
-							Hello! I&apos;m Pratham, a developer based in Delhi.
+				<div className="flex flex-col gap-10 w-fit md:min-h-[80vh] justify-center tracking-wide mt-36 mx-2 md:m-10 md:mb-0 mr-5">
+					<div className="flex flex-col md:gap-10">
+						<h1
+							className="text-5xl md:text-[5rem]"
+							style={{ fontFamily: "'Old Standard TT', serif" }}
+						>
+							Hello! I&apos;m Pratham.
 						</h1>
-						<p className="text-lg">
-							I started learning web development when i was 14 as a hobby.
-							Thereafter I got several opportunities to compete with students
-							from Delhi in inter-school hackathons and winning awards in Web
-							Designing. During that period I learned the fundamentals of HTML,
-							CSS and Javascript along with JQuery for DOM manipulation.
-						</p>
-						<p className="text-lg">
-							I am currently majoring in Computer Science from University of
-							Delhi while also mainting a Freelance career as a Front-end
-							Developer. In my degree I learned various low level fundamentals
-							of computer science that are essential for every developer like
-							Regex and Data Structures and Algorithms. While in my Freelance
-							Career, I began as an intern in Capwise, fintech startup where i
-							learned advanced React concepts like Redux. After leaving that
-							internship in the middle, I started working as a freelance
-							developer.
-						</p>
-						<p className="text-lg">
-							I have previously worked with Visuals Clipping, a bulk image
-							editing startup, in order to build their website and am currently
-							working with Autopix in building their client portal, and with the
-							SPIE Student Chapter ANDC in helping build their portfolio
-							website.
-						</p>
-						<div className="flex gap-5 mt-6">
-							<Link
-								href="https://www.linkedin.com/in/pratham-sharma-278aab212/"
-								target={"_blank"}
-								className="px-8 py-2 bg-gray-800 text-gray-100 cursor-pointer rounded-sm font-medium shadow-xl hover:shadow-sm hover:ease-in duration-200"
-							>
-								Visit Linkedin
-							</Link>
-							<Link
-								href="https://github.com/prrrathm"
-								target={"_blank"}
-								className="px-8 py-2 text-gray-800 bg-gray-100 cursor-pointer rounded-sm font-medium shadow-md hover:shadow-sm hover:ease-in duration-200"
-							>
-								Visit Github
-							</Link>
-						</div>
+						<h1
+							className="text-5xl md:text-[4.5rem] italic"
+							style={{ fontFamily: "'Old Standard TT', serif" }}
+						>
+							Frontend Developer
+						</h1>
 					</div>
-					<div className="">
-						<img src="img1.jpg" className=""></img>
+					<div className="flex flex-row-reverse">
+						<p className="text-2xl md:w-1/2">
+							I'm a Frontend Developer based working from Delhi. Started
+							learning web development when i was 14, ever since then I'm
+							building interfaces with state of art, scalable technologies and .
+						</p>
 					</div>
 				</div>
+				{/* <div className="">
+						<img src="img1.jpg" className=""></img>
+					</div> */}
 				{/* Projects */}
-				<div className="flex flex-col gap-10 pb-5">
-					<h2 className=" text-3xl font-bold text-center md:text-left">
-						Projects
-					</h2>
+				<div className="flex flex-col gap-10 pb-5 w-full">
+					<div className="flex w-full items-center gap-10">
+						<h2 className=" text-3xl font-bold text-center md:text-left">
+							Projects
+						</h2>
+						<div className="hidden md:block bg-blue-400/80 h-[1px] w-full"></div>
+					</div>
 					<div className="flex md:flex-wrap flex-col md:flex-row gap-4 justify-center md:justify-start items-stretch">
-						{/* card 1 */}
-						<Link
-							href="https://www.visualsclipping.com/"
-							target="_blank"
-							className="flex flex-col border-2 border-blue-300 hover:border-blue-400 hover:bg-blue-300/10 cursor-pointer rounded-md py-3 px-5 gap-1 shadow-sm hover:shadow-xl hover:ease-in duration-200 self-stretch md:w-min"
-						>
-							<h3 className="font-bold text-xl">Visuals Clipping</h3>
-							<p className="text-sm">Portfolio website of Visuals Clipping.</p>
-							<div className="py-2 flex gap-2">
-								<div className="bg-gray-200 rounded-full px-3 py-1 text-xs">
-									Next.js
-								</div>
-								<div className="bg-gray-200 rounded-full px-3 py-1 text-xs">
-									Tailwind
-								</div>
-							</div>
-						</Link>
-						{/* card 2 */}
-						<Link
-							href="https://github.com/prrrathm/spotipy-analysis"
-							target="_blank"
-							className="flex flex-col border-2 border-blue-300 hover:border-blue-400 hover:bg-blue-300/10 cursor-pointer rounded-md py-3 px-5 gap-1 shadow-sm hover:shadow-xl hover:ease-in duration-200 self-stretch md:w-min"
-						>
-							<h3 className="font-bold text-xl">Spotify Analysis</h3>
-							<p className="text-sm">
-								Analysis of a spotify playlist containing songs from albums of
-								different genres, languages and industries.
-							</p>
-							<div className="py-2 flex gap-2">
-								<div className="bg-gray-200 rounded-full px-3 py-1 text-xs">
-									Python
-								</div>
-								<div className="bg-gray-200 rounded-full px-3 py-1 text-xs">
-									Jupyter
-								</div>
-								<div className="bg-gray-200 rounded-full px-3 py-1 text-xs">
-									Pandas
-								</div>
-							</div>
-						</Link>
-						{/* card 3 */}
-						<Link
-							href="https://spie-next.vercel.app/"
-							target="_blank"
-							className="flex flex-col border-2 border-blue-300 hover:border-blue-400 hover:bg-blue-300/10 cursor-pointer rounded-md py-3 px-5 gap-1 shadow-sm hover:shadow-xl hover:ease-in duration-200 self-stretch md:w-min"
-						>
-							<h3 className="font-bold text-xl">SPIE ANDC</h3>
-							<p className="text-sm">
-								Official website of SPIE ANDC one of very few student Chapter of
-								the esteemed international organisation
-							</p>
-							<div className="py-2 flex gap-2">
-								<div className="bg-gray-200 rounded-full px-3 py-1 text-xs">
-									JavaScript
-								</div>
-								<div className="bg-gray-200 rounded-full px-3 py-1 text-xs">
-									Tailwind
-								</div>
-								<div className="bg-gray-200 rounded-full px-3 py-1 text-xs">
-									Python
-								</div>
-							</div>
-						</Link>
+						{workData.map((item, iter) => {
+							return (
+								<WorkCard
+									title={item.title}
+									desc={item.desc}
+									link={item.link}
+									skills={item.tech}
+								/>
+							);
+						})}
 					</div>
 				</div>
 				{/* Footer */}
