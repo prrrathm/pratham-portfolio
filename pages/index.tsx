@@ -42,7 +42,7 @@ export default function Home() {
 					<div className="flex flex-row-reverse">
 						<p className="text-2xl md:w-1/2">
 							I&apos;m a Frontend Developer based working from Delhi. Started
-							learning web development when i was 14, ever since then I'm
+							learning web development when i was 14, ever since then I&apos;m
 							building interfaces with state of art, scalable technologies and .
 						</p>
 					</div>
