@@ -41,7 +41,7 @@ export default function Home() {
 					</div>
 					<div className="flex flex-row-reverse">
 						<p className="text-2xl md:w-1/2">
-							I'm a Frontend Developer based working from Delhi. Started
+							I&apos;m a Frontend Developer based working from Delhi. Started
 							learning web development when i was 14, ever since then I'm
 							building interfaces with state of art, scalable technologies and .
 						</p>
@@ -51,6 +51,7 @@ export default function Home() {
 						<img src="img1.jpg" className=""></img>
 					</div> */}
 				{/* Projects */}
+
 				<div className="flex flex-col gap-10 pb-5 w-full">
 					<div className="flex w-full items-center gap-10">
 						<h2 className=" text-3xl font-bold text-center md:text-left">
@@ -62,6 +63,7 @@ export default function Home() {
 						{workData.map((item, iter) => {
 							return (
 								<WorkCard
+									key={iter}
 									title={item.title}
 									desc={item.desc}
 									link={item.link}
